@@ -8,9 +8,9 @@ int  max(int a, int b) {
 		return b;
 
 }void Dynamic(int* w, int* v, int n, int c) {
-	for (int i = 1; i <= n; i++)//背包容量
+	for (int i = 1; i <= n; i++)//鑳屽寘瀹归噺
 		dp[i][0] = 0;
-	for (int i = 1; i <= c; i++)//物品个数
+	for (int i = 1; i <= c; i++)//鐗╁搧涓暟
 		dp[0][i] = 0;
 	int i, j;
 	for (int i = 1; i <= n; i++) {
@@ -25,14 +25,14 @@ int  max(int a, int b) {
 
 int main() {
 	int c, n, w[105], v[105];
-	printf("请输入物品个数和背包容量\n");
+	printf("璇疯緭鍏ョ墿鍝佷釜鏁板拰鑳屽寘瀹归噺\n");
 	scanf_s("%d %d", &n, &c);
-	//c:背包容量     n:物品数量 
+	//c:鑳屽寘瀹归噺     n:鐗╁搧鏁伴噺 
 	w[0] = 0;
-	printf("请输入各个物品的重量\n");
+	printf("璇疯緭鍏ュ悇涓墿鍝佺殑閲嶉噺\n");
 	for (int i = 1; i < n + 1; i++)
 		scanf_s("%d", &w[i]);
-	printf("请输入各个物品的价值\n");
+	printf("璇疯緭鍏ュ悇涓墿鍝佺殑浠峰�糪n");
 	v[0] = 0;
 	for (int i = 1; i < n + 1; i++)
 		scanf_s("%d", &v[i]);
